@@ -6,5 +6,12 @@
 
 // Next, once we have our HTML elements selected, or imported, into our JS file, we can attach an event listener to them. Attach a "click" event listener to the button that, when triggered, will run a callback function that increases the total clicks element by 1 with each click. 
     // Note: Think back on Elle's lecture on state... What state data are we managing in this game? That information may inform what global variables you will need to create...
+const button= document.getElementById("the-button");
+const totalClicks= document.getElementById("your-total-clicks");
+let count = 0;
 
+button.addEventListener("click",function(){
+    count++
+    totalClicks.innerText=count;
+})
 // If you've done everything correctly, when you click on the button, you should see the total clicks counter increase. 
